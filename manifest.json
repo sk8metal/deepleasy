@@ -1,0 +1,13 @@
+{
+  "name": "DeepL Easyで翻訳",
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions" : [
+     "contextMenus",
+     "http://*/*",
+     "https://*/*"
+  ],
+  "background" : {
+     "scripts" : ["background.js"]
+  }
+}
