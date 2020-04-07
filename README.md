@@ -1,5 +1,6 @@
 ## deepLEasy
-for google chrome extenstion.
+This extension is for google chrome to make DeepL translation easier.
+このエクステンションはDeepL翻訳をより簡単に行うgoogle chrome用のものです。
 
 ## insall
 1. git cloneもしくはClone or dounwloadからzipとしてダウンロードして解凍 
