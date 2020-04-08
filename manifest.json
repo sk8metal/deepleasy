@@ -1,5 +1,5 @@
 {
-  "name": "DeepL Easyで翻訳",
+  "name": "DeepLで翻訳",
   "manifest_version": 2,
   "version": "1.0",
   "permissions" : [
@@ -7,7 +7,14 @@
      "http://*/*",
      "https://*/*"
   ],
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*" ],
+      "js": ["content_scripts.js"]
+  }],
   "background" : {
      "scripts" : ["background.js"]
+  },
+  "browser_action": {
+      "name": "DeepLで翻訳"
   }
 }

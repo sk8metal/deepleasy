@@ -8,6 +8,17 @@ chrome.contextMenus.create ({
     }
 });
 
+chrome.browserAction.onClicked.addListener(function(tab) {
+    //var copyText = document.getSelection(); 
+    //alert(copyText);
+    //var encodeText = encodeURIComponent(copyText);
+    chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
+        encodeText = encodeURIComponent(response.data);
+        alert(encodeText);
+        createTab("https://www.deepl.com/translator#en/ja/" + encodeText);
+    });
+});
+
 function createTab(url) {
     chrome.windows.getCurrent(function (f) {
         chrome.tabs.getSelected(f.id, function (g) {
